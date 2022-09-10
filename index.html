@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/overleys.css">
+    <link rel="stylesheet" href="styles/configes.css">
   </head>
   <body>
     <div id="backdrop"></div>
@@ -20,9 +21,9 @@
       <h1>Play Tic, Tac, Toe</h1>
       <p>Built with HTML, CSS and JavaScript and -of course- lots of love!</p>
     </header>
-    <aside class="modal">
+    <aside class="modal" id="conover">
       <form>
-        <div>
+        <div class="conform">
           <h2>Choose your name</h2>
           <label for="plyrname">Player name : </label>
           <input type="text" name="plyrname" id="plyrname" />
@@ -39,7 +40,7 @@
           <article>
             <h2>Player 1</h2>
             <h3 id="plyrname">NAME</h3>
-            <p>X</p>
+            <p class="symbol">X</p>
             <button class="btn btn_alt">Edit</button>
           </article>
         </li>
@@ -47,7 +48,7 @@
           <article>
             <h2>Player 2</h2>
             <h3 id="plyrname">NAME</h3>
-            <p>O</p>
+            <p class="symbol">O</p>
             <button class="btn btn_alt">Edit</button>
           </article>
         </li>

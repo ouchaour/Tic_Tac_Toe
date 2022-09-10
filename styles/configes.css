@@ -1,0 +1,59 @@
+#conover{
+    text-align: center;
+}
+#conover h2{
+    margin: 0.5rem 0;
+}
+.conform{
+    margin: 0.5rem 0;
+}
+
+.conform label{
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.conform input{
+    font: inherit;
+    width: 15rem;
+    border: 1px solid rgb(189, 189, 189);
+    padding: 0.35rem;
+}
+
+#config{
+    width: 90%;
+    min-width: 40rem;
+    margin: 3rem auto;
+    text-align: center;
+}
+#config ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+#config li{
+    margin: 1rem;
+    padding: 1rem;
+    width: 50rem;
+    border-radius: 4px;
+    background-color: #a8f8ef;
+    box-shadow: 0px 1px 4px rgb(0, 0, 0, 0.25);
+}
+#config h2{
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+#config h3{
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #00727a;
+}
+
+.symbol{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #02444e;
+    margin: 0.5rem 0;
+    
+}

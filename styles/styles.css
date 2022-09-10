@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(230, 255, 255);
+    background-color: rgb(220, 255, 255);
     color: rgb(56, 50, 56);
     margin: 0;
     font-family: "Poppins", sans-serif;
@@ -23,7 +23,7 @@ header{
 .btn_alt{
     background-color: transparent;
     border-color: transparent;
-    color: #009393;
+    color: #00727a;
 }
 .btn:hover{
     background-color: #016170;
