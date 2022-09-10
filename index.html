@@ -11,26 +11,60 @@
         <h1>Play Tic, Tac, Toe</h1>
         <p>Built with HTML, CSS and JavaScript and -of course- lots of love!</p>
     </head>
+    <aside>
+        <form>
+            <div>
+
+                <h2>Choose your name</h2>
+                <label for="plyrname">Player name : </label>
+                <input type="text" name="plyrname" id="plyrname">
+            </div>
+            <div>
+                <button type="cancel">Cancel</button>
+                <button type="submit">Confirm</button>
+            </div>
+        </form>
+    </aside>
     <section id="config">
         <ol>
             <li>
                 <article>
-                    <h3>Player1</h3>
-                    <h5 id="plyrname">name</h5>
+                    <h2>Player 1</h2>
+                    <h3 id="plyrname">NAME</h3>
                     <p>X</p>
                     <button id="edit">Edit</button>
                 </article>
             </li>
             <li>
                 <article>
-                    <h3>Player2</h3>
-                    <h5 id="plyrname">name</h5>
-                    <p>X</p>
+                    <h2>Player 2</h2>
+                    <h3 id="plyrname">NAME</h3>
+                    <p>O</p>
                     <button id="edit">Edit</button>
                 </article>
             </li>
         </ol>
         <button id="start">Start New Game</button>
+    </section>
+    <section id="actived">
+        <article>
+            <h3>You won, <span id="winner">NAME</span>!</h3>
+            <p>Click "Start New Game", to restart new game!</p>
+        </article>
+        <p>it's your turn <span id="active-player">NAME</span> !</p>
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+
+            <li></li>
+            <li></li>
+            <li></li>
+            
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
     </section>
 </body>
 </html>
