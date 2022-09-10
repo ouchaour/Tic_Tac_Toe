@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/overleys.css">
     <link rel="stylesheet" href="styles/configes.css">
+    <link rel="stylesheet" href="styles/game.css">
   </head>
   <body>
     <div id="backdrop"></div>
@@ -56,23 +57,23 @@
       <button class="btn">Start New Game</button>
     </section>
     <section id="actived">
-      <article>
+      <article id="game-over">
         <h3>You won, <span id="winner">NAME</span>!</h3>
         <p>Click "Start New Game", to restart new game!</p>
       </article>
       <p>it's your turn <span id="active-player">NAME</span> !</p>
       <ol>
+        <li class="disabled">x</li>
         <li></li>
         <li></li>
+
+        <li class="disabled">x</li>
+        <li class="disabled">o</li>
         <li></li>
 
         <li></li>
         <li></li>
-        <li></li>
-
-        <li></li>
-        <li></li>
-        <li></li>
+        <li class="disabled">o</li>
       </ol>
     </section>
   </body>

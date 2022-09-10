@@ -1,0 +1,57 @@
+#actived{
+    margin: 2rem 0 5rem 0; /* top right buttom left */
+    text-align: center;
+    /* display: none; */
+}
+
+#game-over{
+    margin: auto;
+    padding: 1rem 2rem;
+    width: 90%;
+    min-width: 40rem;
+    background-color: #02444e;;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0px 2px 8px rgb(0, 0, 0, 0.25);
+    display: none;
+}
+
+#game-over h3{
+    font-size: 2.6rem;
+    margin: 0.5rem 0;
+}
+
+#active-player{
+    font-weight: bold;
+    color: #016170;
+}
+#actived ol{
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3,6rem);
+    grid-template-rows: repeat(3,6rem);
+    justify-content: center;
+    gap: 0.5rem;
+}
+#actived li{
+    background-color: #a8f8ef;
+    border-radius: 2.5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.7rem;
+    font-weight: bold;
+}
+#actived li:hover{
+    background-color: #009393;
+}
+#actived li.disabled{
+    
+    background-color: #009393;
+    color: white;
+    cursor: default;
+}
+
