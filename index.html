@@ -1,70 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic, Tac, Toe</title>
-</head>
-<body>
-    <head>
-        <h1>Play Tic, Tac, Toe</h1>
-        <p>Built with HTML, CSS and JavaScript and -of course- lots of love!</p>
-    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,300;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Play Tic, Tac, Toe</h1>
+      <p>Built with HTML, CSS and JavaScript and -of course- lots of love!</p>
+    </header>
     <aside>
-        <form>
-            <div>
-
-                <h2>Choose your name</h2>
-                <label for="plyrname">Player name : </label>
-                <input type="text" name="plyrname" id="plyrname">
-            </div>
-            <div>
-                <button type="cancel">Cancel</button>
-                <button type="submit">Confirm</button>
-            </div>
-        </form>
+      <form>
+        <div>
+          <h2>Choose your name</h2>
+          <label for="plyrname">Player name : </label>
+          <input type="text" name="plyrname" id="plyrname" />
+        </div>
+        <div>
+          <button type="cancel" class="btn btn_alt">Cancel</button>
+          <button type="submit" class="btn">Confirm</button>
+        </div>
+      </form>
     </aside>
     <section id="config">
-        <ol>
-            <li>
-                <article>
-                    <h2>Player 1</h2>
-                    <h3 id="plyrname">NAME</h3>
-                    <p>X</p>
-                    <button id="edit">Edit</button>
-                </article>
-            </li>
-            <li>
-                <article>
-                    <h2>Player 2</h2>
-                    <h3 id="plyrname">NAME</h3>
-                    <p>O</p>
-                    <button id="edit">Edit</button>
-                </article>
-            </li>
-        </ol>
-        <button id="start">Start New Game</button>
+      <ol>
+        <li>
+          <article>
+            <h2>Player 1</h2>
+            <h3 id="plyrname">NAME</h3>
+            <p>X</p>
+            <button class="btn btn_alt">Edit</button>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h2>Player 2</h2>
+            <h3 id="plyrname">NAME</h3>
+            <p>O</p>
+            <button class="btn btn_alt">Edit</button>
+          </article>
+        </li>
+      </ol>
+      <button class="btn">Start New Game</button>
     </section>
     <section id="actived">
-        <article>
-            <h3>You won, <span id="winner">NAME</span>!</h3>
-            <p>Click "Start New Game", to restart new game!</p>
-        </article>
-        <p>it's your turn <span id="active-player">NAME</span> !</p>
-        <ol>
-            <li></li>
-            <li></li>
-            <li></li>
+      <article>
+        <h3>You won, <span id="winner">NAME</span>!</h3>
+        <p>Click "Start New Game", to restart new game!</p>
+      </article>
+      <p>it's your turn <span id="active-player">NAME</span> !</p>
+      <ol>
+        <li></li>
+        <li></li>
+        <li></li>
 
-            <li></li>
-            <li></li>
-            <li></li>
-            
-            <li></li>
-            <li></li>
-            <li></li>
-        </ol>
+        <li></li>
+        <li></li>
+        <li></li>
+
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
     </section>
-</body>
+  </body>
 </html>
