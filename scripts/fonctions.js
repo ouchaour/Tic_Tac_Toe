@@ -28,10 +28,27 @@ function done(event){
 
 // for the Game:
 function newGame(){
-    if(players[0].name != "" && players[1].name != "")
+    if(players[0].name != "" && players[1].name != ""){
+        document.getElementById("active-player").textContent = players[activeId].name;
         gameArea.style.display = "block";
+    }
     return;
 }
+
+function switchkey(){
+    if(activeId==0)
+        activeId = 1;
+    else
+        activeId = 0;
+    document.getElementById("active-player").textContent = players[activeId].name;
+}
+
+function cocher(event){
+    event.target.textContent = players[activeId].symbol;
+    event.target.classList.add("disabled");
+    switchkey();
+}
+
 
 // function isAlpha(ch){
 //     let i=0;
