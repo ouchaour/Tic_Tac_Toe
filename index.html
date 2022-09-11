@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/configes.css">
     <link rel="stylesheet" href="styles/game.css">
 
+    <script src="scripts/fonctions.js" defer></script>
     <script src="scripts/app.js" defer></script>
   </head>
   <body>
@@ -31,8 +32,9 @@
           <label for="plyrname">Player name : </label>
           <input type="text" name="plyrname" id="plyrname" />
         </div>
+        <p id="errors"></p>
         <div>
-          <button type="cancel" class="btn btn_alt" id="close">Cancel</button>
+          <button type="reset" class="btn btn_alt" id="close">Cancel</button>
           <button type="submit" class="btn" id="done">Confirm</button>
         </div>
       </form>

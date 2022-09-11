@@ -19,6 +19,14 @@
     border: 1px solid rgb(189, 189, 189);
     padding: 0.35rem;
 }
+#errors{
+    color: rgb(136, 4, 4);
+}
+.error input{
+    border-color: rgb(136, 4, 4);
+    color: rgb(136, 4, 4);
+    background-color: rgb(255, 230, 230);
+}
 
 #config{
     width: 90%;
