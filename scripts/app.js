@@ -7,9 +7,16 @@ const errcheck = document.getElementById("errors");
 const stratBtn = document.getElementById("start");
 const gameArea = document.getElementById("actived");
 const morba3 = document.querySelectorAll("#tabla li");
+// const morba3 = document.getElementById("tabla");
 
 let playerId = 0;
 let activeId = 0;
+
+const gameData=[
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
+];
 
 const players=[
     {
@@ -31,3 +38,5 @@ stratBtn.addEventListener("click",newGame);
 for(const item of morba3){
     item.addEventListener("click",cocher);
 }
+
+// morba3.addEventListener("click",cocher);

@@ -36,7 +36,7 @@ function newGame(){
 }
 
 function switchkey(){
-    if(activeId==0)
+    if(activeId===0)
         activeId = 1;
     else
         activeId = 0;
@@ -44,8 +44,20 @@ function switchkey(){
 }
 
 function cocher(event){
-    event.target.textContent = players[activeId].symbol;
-    event.target.classList.add("disabled");
+    const selected = event.target;
+    
+    const scol = Number(selected.dataset.col)-1;
+    const srow = Number(selected.dataset.row)-1;
+    if(gameData[srow][scol]>0){
+        alert("Select an Empty field !!");
+        return;
+    }
+
+    selected.textContent = players[activeId].symbol;
+    selected.classList.add("disabled");
+
+    gameData[srow][scol] = activeId+1;
+    console.log(gameData);
     switchkey();
 }
 
