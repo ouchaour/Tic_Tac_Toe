@@ -8,9 +8,11 @@ const stratBtn = document.getElementById("start");
 const gameArea = document.getElementById("actived");
 const morba3 = document.querySelectorAll("#tabla li");
 // const morba3 = document.getElementById("tabla");
+const gameOver = document.getElementById("game-over");
 
 let playerId = 0;
 let activeId = 0;
+let round = 1;
 
 const gameData=[
     [0, 0, 0],

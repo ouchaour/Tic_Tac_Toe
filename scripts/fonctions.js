@@ -1,10 +1,10 @@
-function overly(event){
+function overly(event) {
     playerId = Number(event.target.dataset.playerid);
     document.getElementById("conover").style.display = "block";
     document.getElementById("backdrop").style.display = "block";
 }
 
-function close(){
+function close() {
     document.getElementById("conover").style.display = "none";
     document.getElementById("backdrop").style.display = "none";
     format.firstElementChild.classList.remove("error");
@@ -12,43 +12,43 @@ function close(){
     format.firstElementChild.lastElementChild.value = null;
 }
 
-function done(event){
+function done(event) {
     event.preventDefault();
     const name = document.getElementById("plyrname").value.trim();
-    if(!name){
+    if (!name) {
         event.target.firstElementChild.classList.add("error");
-        errcheck.textContent = "Enter a valid name !!"; 
+        errcheck.textContent = "Enter a valid name !!";
         return;
     }
 
-    document.getElementById("name"+playerId).textContent = name;
-    players[playerId-1].name = name;
+    document.getElementById("name" + playerId).textContent = name;
+    players[playerId - 1].name = name;
     close();
 }
 
 // for the Game:
-function newGame(){
-    if(players[0].name != "" && players[1].name != ""){
+function newGame() {
+    if (players[0].name != "" && players[1].name != "") {
         document.getElementById("active-player").textContent = players[activeId].name;
         gameArea.style.display = "block";
     }
     return;
 }
 
-function switchkey(){
-    if(activeId===0)
+function switchkey() {
+    if (activeId === 0)
         activeId = 1;
     else
         activeId = 0;
     document.getElementById("active-player").textContent = players[activeId].name;
 }
 
-function cocher(event){
+function cocher(event) {
     const selected = event.target;
-    
-    const scol = Number(selected.dataset.col)-1;
-    const srow = Number(selected.dataset.row)-1;
-    if(gameData[srow][scol]>0){
+
+    const scol = Number(selected.dataset.col) - 1;
+    const srow = Number(selected.dataset.row) - 1;
+    if (gameData[srow][scol] > 0) {
         alert("Select an Empty field !!");
         return;
     }
@@ -56,11 +56,52 @@ function cocher(event){
     selected.textContent = players[activeId].symbol;
     selected.classList.add("disabled");
 
-    gameData[srow][scol] = activeId+1;
-    console.log(gameData);
+    gameData[srow][scol] = activeId + 1;
+    const winner = checkWinner();
+    if(winner!=0){
+        endGame(winner);
+    }
+    round++;
     switchkey();
 }
 
+function checkWinner() {
+    // rows
+    for (let i = 0; i < 3; i++) {
+        if(gameData[i][0] > 0 && gameData[i][0] == gameData[i][1] && gameData[i][1] == gameData[i][2])
+            return gameData[i][0];
+    }
+    // columns
+    for (let i = 0; i < 3; i++) {
+        if(gameData[0][i] > 0 && gameData[0][i] == gameData[1][i] && gameData[1][i] == gameData[2][i])
+            return gameData[0][i];
+    }
+    // Diagonal
+    if(gameData[0][0] > 0 && gameData[0][0] == gameData[1][1] && gameData[1][1] == gameData[2][2])
+        return gameData[0][0];
+        
+    else if(gameData[0][2] > 0 && gameData[0][2] == gameData[1][1] && gameData[1][1] == gameData[2][0])
+        return gameData[0][2];
+    if(round == 9)
+        return -1;
+    return 0;
+}
+function endGame(win){
+    gameOver.style.display = "block";
+    if(win>0){
+        document.getElementById("winner").textContent = players[win-1];
+    }
+    else{
+        document.getElementById("winner").textContent = "it's a Draw !"
+    }
+
+}
+
+function reset(){
+    let activeId = 0;
+    let round = 1;
+
+}
 
 // function isAlpha(ch){
 //     let i=0;
