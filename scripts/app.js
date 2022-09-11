@@ -13,6 +13,7 @@ const gameOver = document.getElementById("game-over");
 let playerId = 0;
 let activeId = 0;
 let round = 1;
+let etat = false;
 
 const gameData=[
     [0, 0, 0],

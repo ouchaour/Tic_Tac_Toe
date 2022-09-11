@@ -28,11 +28,15 @@ function done(event) {
 
 // for the Game:
 function newGame() {
-    if (players[0].name != "" && players[1].name != "") {
+    if(players[0].name != "" && players[1].name != "") {
+        reset();
         document.getElementById("active-player").textContent = players[activeId].name;
         gameArea.style.display = "block";
     }
-    return;
+    else{
+        alert("Set custom names for Both!");
+        return;
+    }
 }
 
 function switchkey() {
@@ -44,8 +48,10 @@ function switchkey() {
 }
 
 function cocher(event) {
-    const selected = event.target;
+    if(etat)
+        return;
 
+    const selected = event.target;
     const scol = Number(selected.dataset.col) - 1;
     const srow = Number(selected.dataset.row) - 1;
     if (gameData[srow][scol] > 0) {
@@ -87,20 +93,31 @@ function checkWinner() {
     return 0;
 }
 function endGame(win){
+    etat = true;
     gameOver.style.display = "block";
     if(win>0){
-        document.getElementById("winner").textContent = players[win-1];
+        document.getElementById("winner").textContent = players[win-1].name;
     }
     else{
-        document.getElementById("winner").textContent = "it's a Draw !"
+        gameOver.firstElementChild.innerText = "it's a Draw !"
     }
-
 }
 
 function reset(){
-    let activeId = 0;
-    let round = 1;
-
+    etat = false;
+    activeId = 0;
+    round = 1;
+    gameOver.style.display = "none";
+    gameOver.firstElementChild.innerHTML = '<h3>You won, <span id="winner">NAME</span>!</h3>';
+    let k = 0;
+    for(let i=0; i<3;i++){
+        for(let j=0; j<3;j++){
+            gameData[i][j]=0;
+            morba3[k].textContent = "";
+            morba3[k].classList.remove("disabled");
+            k++;
+        }
+    }
 }
 
 // function isAlpha(ch){

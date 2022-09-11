@@ -1,7 +1,7 @@
 #actived{
     margin: 2rem 0 5rem 0; /* top right buttom left */
     text-align: center;
-    /* display: none; */
+    display: none;
 }
 
 #game-over{
