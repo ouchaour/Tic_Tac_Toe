@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="styles/overleys.css">
     <link rel="stylesheet" href="styles/configes.css">
     <link rel="stylesheet" href="styles/game.css">
+
+    <script src="scripts/app.js" defer></script>
   </head>
   <body>
     <div id="backdrop"></div>
@@ -30,8 +32,8 @@
           <input type="text" name="plyrname" id="plyrname" />
         </div>
         <div>
-          <button type="cancel" class="btn btn_alt">Cancel</button>
-          <button type="submit" class="btn">Confirm</button>
+          <button type="cancel" class="btn btn_alt" id="close">Cancel</button>
+          <button type="submit" class="btn" id="done">Confirm</button>
         </div>
       </form>
     </aside>
@@ -42,7 +44,7 @@
             <h2>Player 1</h2>
             <h3 id="plyrname">NAME</h3>
             <p class="symbol">X</p>
-            <button class="btn btn_alt">Edit</button>
+            <button class="btn btn_alt" id="edit1">Edit</button>
           </article>
         </li>
         <li>
@@ -50,7 +52,7 @@
             <h2>Player 2</h2>
             <h3 id="plyrname">NAME</h3>
             <p class="symbol">O</p>
-            <button class="btn btn_alt">Edit</button>
+            <button class="btn btn_alt" id="edit2">Edit</button>
           </article>
         </li>
       </ol>
