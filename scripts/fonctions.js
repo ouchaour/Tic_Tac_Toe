@@ -26,6 +26,13 @@ function done(event){
     close();
 }
 
+// for the Game:
+function newGame(){
+    if(players[0].name != "" && players[1].name != "")
+        gameArea.style.display = "block";
+    return;
+}
+
 // function isAlpha(ch){
 //     let i=0;
 //     let c=0;
