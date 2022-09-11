@@ -33,3 +33,13 @@ header{
     background-color: rgb(245, 255, 255);
     border-color: transparent;
 }
+footer{
+    text-align: center;
+}
+footer h5{
+    margin-top: 55px;
+    font-size: 13px;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-weight : 555;
+    color: rgb(18, 98, 104, 0.85);
+}
