@@ -119,14 +119,3 @@ function reset(){
         }
     }
 }
-
-// function isAlpha(ch){
-//     let i=0;
-//     let c=0;
-//     while(i<ch.length){
-//         if ((ch[i] >= "a" && ch[i] <= "z") || (ch[i] >= "A" && ch[i] <= "Z"))
-//             c++;
-//             i++;
-//         }
-//         return c==0 ? false : true;
-// }
