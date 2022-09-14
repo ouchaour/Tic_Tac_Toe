@@ -3,4 +3,4 @@ a simple tic tac toe game exercice for two players, created by JAVASCRIPT and st
 
 ### Discover it here :
 
-[Tic_Tac_Toe](x-o-2022.netlify.app)
+[Tic_Tac_Toe](https://x-o-2022.netlify.app)
