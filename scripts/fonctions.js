@@ -105,7 +105,7 @@ function endGame(win){
 
 function reset(){
     etat = false;
-    activeId = 0;
+    activeId = Math.floor(Math.random() * 2);;
     round = 1;
     gameOver.style.display = "none";
     gameOver.firstElementChild.innerHTML = '<h3>You won, <span id="winner">NAME</span>!</h3>';
@@ -119,3 +119,4 @@ function reset(){
         }
     }
 }
+ 

@@ -11,7 +11,8 @@ const morba3 = document.querySelectorAll("#tabla li");
 const gameOver = document.getElementById("game-over");
 
 let playerId = 0;
-let activeId = 0;
+// let activeId = 0;
+let activeId = Math.floor(Math.random() * 2);
 let round = 1;
 let etat = false;
 
