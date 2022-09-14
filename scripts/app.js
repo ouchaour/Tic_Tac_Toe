@@ -7,11 +7,9 @@ const errcheck = document.getElementById("errors");
 const stratBtn = document.getElementById("start");
 const gameArea = document.getElementById("actived");
 const morba3 = document.querySelectorAll("#tabla li");
-// const morba3 = document.getElementById("tabla");
 const gameOver = document.getElementById("game-over");
 
 let playerId = 0;
-// let activeId = 0;
 let activeId = Math.floor(Math.random() * 2);
 let round = 1;
 let etat = false;
@@ -42,5 +40,3 @@ stratBtn.addEventListener("click",newGame);
 for(const item of morba3){
     item.addEventListener("click",cocher);
 }
-
-// morba3.addEventListener("click",cocher);
